@@ -9,7 +9,6 @@ const BioStyles = styled.div`
     border-radius: 50%;
   }
   p {
-    font-size: 2rem;
     font-weight: 500;
   }
 `;

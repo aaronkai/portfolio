@@ -7,14 +7,20 @@ import Socials from './Socials';
 export default function Header() {
   const HeaderStyles = styled.header`
     padding: 1rem;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-rows: auto auto 1fr;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    /* grid-gap: 1rem;
+    grid-template-rows: repeat(5, auto); */
+    /* align-items: start;
+    justify-content: start; */
     background-color: rgb(0, 0, 0, 0.3);
     ul {
       margin: 0;
       padding: 0;
+    }
+    @media (max-width: 630px) {
+      grid-template-columns: 25% 1fr auto;
+      align-items: center;
     }
   `;
 

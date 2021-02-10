@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const NavStyles = styled.div`
-  margin-top: -30px;
   padding-bottom: 8px;
   ul {
     display: grid;
@@ -15,6 +14,7 @@ const NavStyles = styled.div`
   }
   a {
     text-decoration: none;
+    font-size: 3rem;
   }
   a[aria-current] {
     text-decoration: underline;
@@ -24,6 +24,12 @@ const NavStyles = styled.div`
     color: var(--melon);
   }
   z-index: 1;
+  @media (max-width: 630px) {
+    ul {
+      grid-template-columns: repeat(auto-fit, minmax(75px, auto));
+      grid-gap: 1rem;
+    }
+  }
 `;
 
 export default function Logo() {

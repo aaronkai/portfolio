@@ -7,7 +7,7 @@ import SEO from '../components/SEO';
 
 const PageStyles = styled.div`
   display: grid;
-  max-width: 300px;
+  max-width: 50rem;
   grid-gap: 2rem;
   padding: 2rem;
   justify-items: center;

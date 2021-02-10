@@ -1,4 +1,3 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import Opossum from '../assets/opossum.svg';
@@ -15,9 +14,7 @@ const LogoImageStyles = styled.div`
 export default function Logo() {
   return (
     <LogoImageStyles>
-      <Link to="/">
-        <Opossum className="logo-image" />
-      </Link>
+      <Opossum className="logo-image" />
     </LogoImageStyles>
   );
 }

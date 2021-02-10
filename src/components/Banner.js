@@ -5,11 +5,9 @@ const BannerStyles = styled.main`
   display: grid;
   grid-gap: 1rem;
   h1 {
-    font-size: 3em;
     font-weight: 600;
   }
   h2 {
-    font-size: 1.5em;
     margin: 0;
   }
   .banner__subtitle {

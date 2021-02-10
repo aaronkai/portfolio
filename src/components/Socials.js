@@ -9,11 +9,12 @@ import styled from 'styled-components';
 const SocialStyles = styled.div`
   ul {
     display: grid;
-    grid-template-columns: 20px 20px;
+    grid-template-columns: auto auto;
     justify-items: end;
     justify-content: end;
-    grid-gap: 5px;
+    grid-gap: 1rem;
   }
+
   a:hover {
     color: var(--melon);
   }

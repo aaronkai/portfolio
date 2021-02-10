@@ -14,6 +14,7 @@ const Typography = createGlobalStyle`
     letter-spacing: 0.5px;
     margin: 0;
     padding: 0;
+    font-size: 3rem;
   }
   h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
@@ -21,13 +22,14 @@ const Typography = createGlobalStyle`
     padding: 0;
   }
   h1 {
-    font-size: 3em;
+    font-size: 10rem;
     font-weight: 600;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 6rem;
     margin: 0;
   }
+
   a {
     color: var(--white);
     text-decoration-color: var(--aqua);
