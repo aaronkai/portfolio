@@ -22,6 +22,8 @@ export default function Bio({ selfie }) {
         project. In my free-time, I'm staying home, staying safe, and learning
         more and more about making modern websites.
       </p>
+      <p>To see some examples of my work, check out my projects.</p>
+      <p>Drop me a line using the contact link</p>
     </BioStyles>
   );
 }

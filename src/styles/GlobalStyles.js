@@ -41,7 +41,7 @@ const GlobalStyles = createGlobalStyle`
     &:hover {
       --cast: 4px;
     }
-  }
+  }}
 
   .gatsby-image-wrapper img[src*=base64\\,] {
     image-rendering: -moz-crisp-edges;
@@ -54,13 +54,13 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--lime) var(--white);
+    scrollbar-color: var(--darkmelon);
   }
   body::-webkit-scrollbar-track {
     background: var(--white);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--lime) ;
+    background-color: var(--darkmelon) ;
     border-radius: 6px;
     border: 3px solid var(--white);
   }
@@ -78,11 +78,11 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  /* .tilt {
+  .tilt {
     transform: rotate(-2deg);
     position: relative;
     display: inline-block;
-  } */
+  }
 
 `;
 

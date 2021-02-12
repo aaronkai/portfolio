@@ -1,20 +1,30 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillGithub,
+} from 'react-icons/ai';
 
 const NavStyles = styled.div`
   padding-bottom: 8px;
   ul {
     display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 2rem;
     justify-items: end;
     justify-content: end;
+    align-items: center;
   }
   li {
+    display: grid;
+    justify-items: center;
     padding-top: 3px;
   }
   a {
     text-decoration: none;
-    font-size: 3rem;
+    font-size: 4rem;
   }
   a[aria-current] {
     text-decoration: underline;
@@ -23,13 +33,12 @@ const NavStyles = styled.div`
   a:hover {
     color: var(--melon);
   }
-  z-index: 1;
-  @media (max-width: 630px) {
+  /* @media (max-width: 630px) {
     ul {
       grid-template-columns: repeat(auto-fit, minmax(75px, auto));
       grid-gap: 1rem;
     }
-  }
+  } */
 `;
 
 export default function Logo() {
@@ -42,11 +51,26 @@ export default function Logo() {
         <li>
           <Link to="/projects">Projects</Link>
         </li>
-        {/* <li>
-          <Link to="/about">About</Link>
-        </li> */}
         <li>
           <a href="mailto:hotel.kilo.alpha@gmail.com">Contact</a>
+        </li>
+        <li>
+          <a
+            href="https://www.github.com/aaronkai"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillGithub />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/aaron-hubbard/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AiFillLinkedin />
+          </a>
         </li>
       </ul>
     </NavStyles>

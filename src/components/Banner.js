@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 const BannerStyles = styled.main`
   display: grid;
+  align-content: center;
+  justify-content: center;
   grid-gap: 1rem;
   h1 {
     font-weight: 600;
