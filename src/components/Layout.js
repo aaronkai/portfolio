@@ -1,36 +1,60 @@
 import React from 'react';
 import styled from 'styled-components';
 import 'normalize.css';
-import Footer from './Footer';
 
+import { graphql, useStaticQuery } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import GlobalStyles from '../styles/GlobalStyles';
 import Typography from '../styles/Typography';
+import Spacing from '../styles/Spacing';
+import Colors from '../styles/Colors';
+
 import Header from './Header';
+import Footer from './Footer';
 
 export default function Layout({ children }) {
-  const MainGridStyles = styled.div`
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "flower_illustration.png" }) {
+          childImageSharp {
+            fluid(quality: 90, maxWidth: 1920) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const LayoutGridStyles = styled.div`
     display: grid;
-    grid-template-rows: 7% 80% 10%;
-    grid-template-areas:
-      'header'
-      'body'
-      'footer';
-    grid-gap: 10px;
-    /* @media (max-width: 630px) {
-      grid-template-columns: 100vw;
-      grid-template-rows: auto auto;
-    } */
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+    background-color: var(--gray);
+    border-left: 3px solid black;
+    border-right: 3px solid black;
   `;
+
+  const MainStyles = styled.main`
+    padding: var(--space-md);
+  `;
+
+  const imageData = data.desktop.childImageSharp.fluid;
 
   return (
     <>
       <GlobalStyles />
       <Typography />
-      <MainGridStyles>
-        <Header />
-        {children}
-      </MainGridStyles>
-      <Footer />
+      <Spacing />
+      <Colors />
+      <BackgroundImage fluid={imageData} class>
+        <LayoutGridStyles>
+          <Header />
+          <MainStyles>{children}</MainStyles>
+          <Footer />
+        </LayoutGridStyles>
+      </BackgroundImage>
     </>
   );
 }

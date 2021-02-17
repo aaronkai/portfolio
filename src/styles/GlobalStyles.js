@@ -2,33 +2,16 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --red: #FF4949;
-    --black: #2E2E2E;
-    --yellow: #ffc600;
-    --white: #fff;
-    --gray: #272524;
-    --melon: #FFA273;
-    --darkmelon: #DB7C4D;
-    --aqua: #4DDBD1;
-    --darkaqua: #158F86;
-  }
-  html {
-    font-size: 10px;
+    --maxWidth: 1000px;
   }
 
-  body {
-    font-size: 2rem;
-    background-color: var(--gray);
-
-  }
-
-  fieldset {
-    border-color: rgba(0,0,0,0.1);
-    border-width: 1px;
+/* Force padding inside box size */
+  *,*:before, *after{
+    box-sizing: inherit;
   }
 
   button {
-    background: var(--lime);
+    background: var(--aqua);
     color: white;
     border: 0;
     padding: 0.6rem 1rem;
@@ -42,6 +25,12 @@ const GlobalStyles = createGlobalStyle`
       --cast: 4px;
     }
   }}
+
+  .tilt {
+    transform: rotate(-2deg);
+    position: relative;
+    display: inline-block;
+  }
 
   .gatsby-image-wrapper img[src*=base64\\,] {
     image-rendering: -moz-crisp-edges;
@@ -57,12 +46,12 @@ const GlobalStyles = createGlobalStyle`
     scrollbar-color: var(--darkmelon);
   }
   body::-webkit-scrollbar-track {
-    background: var(--white);
+    background: var(--gray);
   }
   body::-webkit-scrollbar-thumb {
     background-color: var(--darkmelon) ;
     border-radius: 6px;
-    border: 3px solid var(--white);
+    border: 3px solid var(--gray);
   }
 
   hr {
@@ -78,11 +67,6 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
   }
 
-  .tilt {
-    transform: rotate(-2deg);
-    position: relative;
-    display: inline-block;
-  }
 
 `;
 

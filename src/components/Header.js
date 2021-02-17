@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from './Logo';
 import Nav from './Nav';
-import Socials from './Socials';
 
 export default function Header() {
   const HeaderStyles = styled.header`
@@ -11,7 +9,7 @@ export default function Header() {
     grid-template-rows: 100%;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0, 0.5);
     background-image: url(../assets/opossum.svg);
     ul {
       margin: 0;

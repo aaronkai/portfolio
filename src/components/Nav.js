@@ -1,11 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import {
-  AiFillTwitterCircle,
-  AiFillLinkedin,
-  AiFillGithub,
-} from 'react-icons/ai';
+import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
 
 const NavStyles = styled.div`
   padding-bottom: 8px;
@@ -24,7 +20,6 @@ const NavStyles = styled.div`
   }
   a {
     text-decoration: none;
-    font-size: 4rem;
   }
   a[aria-current] {
     text-decoration: underline;

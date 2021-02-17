@@ -11,13 +11,10 @@ import SEO from '../components/SEO';
 // 7. Find a way to put it on github
 // 8. sidebar is not long enough. maybe add footer? maybe add header?
 
-const PageStyles = styled.div`
+const HomepageStyles = styled.div`
   display: grid;
-  justify-self: center;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-gap: 2rem;
-  padding: 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--space-md);
   max-width: 1000px;
 
   .image {
@@ -41,7 +38,7 @@ export default function IndexPage({ data: { selfie } }) {
   return (
     <>
       <SEO title="Home" image={selfie} />
-      <PageStyles>
+      <HomepageStyles>
         <div className="left">
           <Banner className="left" />
         </div>
@@ -61,7 +58,7 @@ export default function IndexPage({ data: { selfie } }) {
           <p>To see some examples of my work, check out my projects.</p>
           <p>Drop me a line using the contact link</p>
         </div>
-      </PageStyles>
+      </HomepageStyles>
     </>
   );
 }

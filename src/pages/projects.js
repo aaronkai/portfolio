@@ -6,9 +6,7 @@ import SEO from '../components/SEO';
 
 const ProjectStyles = styled.div`
   display: grid;
-  max-width: 800px;
-  padding: 2rem;
-  grid-gap: 2rem;
+  justify-content: center;
 `;
 
 const SingleProjectStyles = styled.section`
