@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Banner from '../components/Banner';
 import SEO from '../components/SEO';
+import Map from '../assets/svg/southeast.svg';
 
 // TO DO
 // 3. call to action like "request a quote"
@@ -20,6 +21,7 @@ const HomepageStyles = styled.div`
   .image {
     align-self: center;
     justify-self: center;
+    width: 100%;
   }
   .image img {
     border-radius: 50%;
@@ -29,6 +31,7 @@ const HomepageStyles = styled.div`
     grid-row-start: 1;
     grid-row-end: span 2;
     align-self: center;
+    background-image: url(../assets/svg/southeast.svg);
   }
   .bio {
   }
@@ -41,11 +44,20 @@ export default function IndexPage({ data: { selfie } }) {
       <HomepageStyles>
         <div className="left">
           <Banner className="left" />
+          <Map
+            alt="states"
+            width="100%"
+            height="100%"
+            // border="2px solid black"
+            // border-radius="50%"
+          />
         </div>
         <div className="image">
           <Img
             fluid={selfie.childImageSharp.fluid}
-            style={{ height: '350px', width: '350px' }}
+            alt="selfie"
+            title="selfie"
+            // style={{ height: '350px', width: '350px' }}
           />
         </div>
         <div className="bio">
@@ -68,8 +80,9 @@ export const query = graphql`
     selfie: file(relativePath: { eq: "selfie.jpg" }) {
       id
       childImageSharp {
-        fluid(maxWidth: 2000) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluidLimitPresentationSize
         }
       }
     }

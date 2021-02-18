@@ -48,7 +48,7 @@ export default function Layout({ children }) {
       <Typography />
       <Spacing />
       <Colors />
-      <BackgroundImage fluid={imageData} class>
+      <BackgroundImage fluid={imageData} backgroundColor="var(--funerealaqua)">
         <LayoutGridStyles>
           <Header />
           <MainStyles>{children}</MainStyles>
