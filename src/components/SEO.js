@@ -1,6 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import appleIcon from '../images/apple-touch-icon.png';
+import favIconSmall from '../images/favicon-16x16.png';
+import favIconLarge from '../images/favicon-32x32.png';
 
 export default function SEO({ children, location, description, title, image }) {
   const { site } = useStaticQuery(graphql`
@@ -18,25 +21,9 @@ export default function SEO({ children, location, description, title, image }) {
       <html lang="en" />
       <title>{title}</title>
       {/* Fav Icons */}
-      {/* <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="alternate icon" href="/favicon.ico" /> */}
-      <link
-        rel="apple-touch-icon"
-        sizes="180x180"
-        href="/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
+      <link rel="apple-touch-icon" sizes="180x180" href={appleIcon} />
+      <link rel="icon" type="image/png" sizes="32x32" href={favIconLarge} />
+      <link rel="icon" type="image/png" sizes="16x16" href={favIconSmall} />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 
