@@ -15,13 +15,15 @@ import Map from '../assets/svg/southeast.svg';
 const HomepageStyles = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: var(--space-md);
+  grid-gap: var(--space-lg);
   max-width: 1000px;
 
   .image {
     align-self: center;
     justify-self: center;
     width: 100%;
+    border-radius: 50%;
+    border: 2px solid black;
   }
   .image img {
     border-radius: 50%;
@@ -35,6 +37,15 @@ const HomepageStyles = styled.div`
   }
   .bio {
   }
+  .map {
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: var(--darkmelon);
+    opacity: 50%;
+    overflow: hidden;
+    width: 75%;
+    height: 75%;
+  }
 `;
 
 export default function IndexPage({ data: { selfie } }) {
@@ -44,13 +55,9 @@ export default function IndexPage({ data: { selfie } }) {
       <HomepageStyles>
         <div className="left">
           <Banner className="left" />
-          <Map
-            alt="states"
-            width="100%"
-            height="100%"
-            // border="2px solid black"
-            // border-radius="50%"
-          />
+          <div className="map">
+            <Map alt="states" width="100%" height="100%" />
+          </div>
         </div>
         <div className="image">
           <Img
