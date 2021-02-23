@@ -7,11 +7,12 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "develop": "FORCE_COLOR=0 gatsby develop",
+    "start": "FORCE_COLOR=0 gatsby develop",
+    "build": "FORCE_COLOR=0 gatsby build",
+    "serve": "FORCE_COLOR=0 gatsby serve",
+    "clean": "gatsby clean",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [
@@ -44,10 +45,12 @@
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
+    "cypress": "^6.5.0",
     "eslint": "^7.15.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-wesbos": "^1.0.1",
+    "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-html": "^6.1.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
