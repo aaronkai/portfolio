@@ -42,7 +42,7 @@ export default function IndexPage({ data: { selfie } }) {
           <p className="mb-6">
             To see some examples of my work, check out my projects.
           </p>
-          <p>Drop me a line using the contact link.</p>
+          <p className="mb-6">Drop me a line using the contact link.</p>
         </section>
       </main>
     </>
