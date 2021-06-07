@@ -9,7 +9,6 @@ import Map from '../assets/svg/southeast.svg';
 // TO DO
 // 3. call to action like "request a quote"
 // 4. Testimonials
-// 7. Find a way to put it on github
 // 8. sidebar is not long enough. maybe add footer? maybe add header?
 
 const HomepageStyles = styled.div`
@@ -45,6 +44,14 @@ const HomepageStyles = styled.div`
     overflow: hidden;
     width: 75%;
     height: 75%;
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+
+    .left {
+      text-align: center;
+    }
   }
 `;
 
