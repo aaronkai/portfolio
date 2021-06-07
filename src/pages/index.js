@@ -2,20 +2,23 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import SEO from "../components/SEO";
-import Map from "../assets/svg/southeast.svg";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default function IndexPage({ data: { selfie } }) {
+export default function IndexPage({ data }) {
+  console.log({ data });
+  const selfie = getImage(data.selfie);
+  console.log(selfie);
   return (
     <>
       <SEO title="Home" image={selfie} />
       <main className="grid px-6 max-w-xl m-auto">
-        <aside className="mt-10 ">
-          <Img
-            fluid={selfie.childImageSharp.fluid}
+        <aside className="mt-10 grid m-auto justify-items-center">
+          <GatsbyImage
+            image={selfie}
             alt="selfie"
             title="selfie"
-            className="rounded-full border-2 border-gray-800 m-auto"
-          />{" "}
+            className="rounded-full border-2 border-gray-800 "
+          />
           <header className="grid gap-2 mt-10">
             <h1 className="text-5xl text-gray-800 font-sans text-center">
               Aaron Hubbard
@@ -27,10 +30,6 @@ export default function IndexPage({ data: { selfie } }) {
               Building fast and functional things for the web
             </h5>
           </header>
-          {/* <Map
-              alt="states"
-              className="border-2 border-gray-800 rounded-full overflow-hidden bg-gray-200"
-            /> */}
         </aside>
         <section className="mt-10">
           <p className="mb-6">
@@ -49,15 +48,16 @@ export default function IndexPage({ data: { selfie } }) {
   );
 }
 
-export const query = graphql`
-  query SelfieQuery {
+export const newquery = graphql`
+  query NewSelfieQuery {
     selfie: file(relativePath: { eq: "selfie.jpg" }) {
       id
       childImageSharp {
-        fluid(maxHeight: 400) {
-          ...GatsbyImageSharpFluid_withWebp
-          ...GatsbyImageSharpFluidLimitPresentationSize
-        }
+        gatsbyImageData(
+          width: 400
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }
