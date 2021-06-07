@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillGithub,
-} from 'react-icons/ai';
-import styled from 'styled-components';
+} from "react-icons/ai";
+import styled from "styled-components";
 
 const SocialStyles = styled.div`
   ul {

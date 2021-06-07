@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
-import appleIcon from '../images/apple-touch-icon.png';
-import favIconSmall from '../images/favicon-16x16.png';
-import favIconLarge from '../images/favicon-32x32.png';
+import React from "react";
+import { Helmet } from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
+import appleIcon from "../images/apple-touch-icon.png";
+import favIconSmall from "../images/favicon-16x16.png";
+import favIconLarge from "../images/favicon-32x32.png";
 
 export default function SEO({ children, location, description, title, image }) {
   const { site } = useStaticQuery(graphql`
@@ -35,7 +35,7 @@ export default function SEO({ children, location, description, title, image }) {
       <meta name="description" content={site.siteMetadata.description} />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image || '/logo.svg'} />
+      <meta property="og:image" content={image || "/logo.svg"} />
       <meta property="og:title" content={title} key="ogtitle" />
       <meta
         propery="og:site_name"

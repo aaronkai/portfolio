@@ -1,18 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-
-const FooterStyles = styled.footer`
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background-color: rgb(0, 0, 0, 0.5);
-  align-self: flex-end;
-`;
+import React from "react";
 
 export default function Footer() {
   return (
-    <FooterStyles>
-      <p>Aaron Hubbard&copy; 2021</p>
-    </FooterStyles>
+    <footer className="bg-green-200 grid items-center border-t-2 border-gray-800 py-2">
+      <p className="text-center text-lg">Aaron Hubbard&copy; 2021</p>
+    </footer>
   );
 }

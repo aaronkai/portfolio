@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import logo from '../images/opossum.svg';
+import React from "react";
+import styled from "styled-components";
+import logo from "../images/opossum.svg";
 
 // Change color of SVG using CSS filter
 const LogoImageStyles = styled.div`

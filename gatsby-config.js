@@ -2,15 +2,15 @@ const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
-    title: 'Aaron Kai Hubbard',
-    description: 'A portfolio for Aaron Hubbard',
+    title: "Aaron Kai Hubbard",
+    description: "A portfolio for Aaron Hubbard",
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // `gatsby-plugin-postcss`,
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,7 +19,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
           include: /svg/,
