@@ -1,7 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import SEO from "../components/SEO";
 
 const ProjectStyles = styled.div`
@@ -40,30 +41,40 @@ export const query = graphql`
     bauccus: file(relativePath: { eq: "bauccus_atlas_screencap.png" }) {
       id
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+        gatsbyImageData(
+          width: 1200
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
       }
     }
   }
 `;
 
-export default function ProjectsPage({ data: { bauccus } }) {
+export default function ProjectsPage({ data }) {
+  const bauccus = getImage(data.bauccus);
+
   return (
     <>
-      <SEO title="Projects" image={bauccus.childImageSharp.fluid} />
+      <SEO title="Projects" image={bauccus} />
       <main className="grid justify-center bg-green-50 px-6">
         <h1 className="text-5xl text-gray-800 font-sans text-center mt-10 ">
           My Projects
         </h1>
-        <section className=" border-2 border-gray-800 my-6 p-6 bg-red-300 rounded">
+        <section className=" border-2 border-gray-800 my-6 p-6 bg-blue-200 rounded shadow">
           <h2 className="text-3xl text-gray-800 font-sans text-center border-b-2 border-gray-800">
             <a href="https://bauccus-atlas.netlify.app/">Bauccus Atlas</a>{" "}
           </h2>
-          <Img className="mt-4" fluid={bauccus.childImageSharp.fluid} />
+          <div className="mt-4 shadow">
+            <GatsbyImage
+              image={bauccus}
+              alt="Bauccus Atlas"
+              title="Bauccus Atlas"
+            />
+          </div>
           <p className="mt-4">
             Bauccus Atlas is a static page generated with Gatsby with a Sanity
-            backend CMS. Based on but not identical to a tutorial given by Wes
+            backend CMS. Based on, but not identical to, a tutorial given by Wes
             Bos.
           </p>
         </section>

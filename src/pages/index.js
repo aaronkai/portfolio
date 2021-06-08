@@ -1,6 +1,5 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Img from "gatsby-image";
 import SEO from "../components/SEO";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -11,7 +10,7 @@ export default function IndexPage({ data }) {
   return (
     <>
       <SEO title="Home" image={selfie} />
-      <main className="grid px-6 max-w-xl m-auto">
+      <main className="grid px-6 max-w-xl m-auto  ">
         <aside className="mt-10 grid m-auto justify-items-center">
           <GatsbyImage
             image={selfie}
@@ -31,17 +30,19 @@ export default function IndexPage({ data }) {
             </h5>
           </header>
         </aside>
-        <section className="mt-10">
-          <p className="mb-6">
+        <section className="mt-10 ">
+          <p className="mb-6 border-l-2 pl-2 border-gray-700">
             Hi! I'm Aaron Hubbard, a family-man and web-developer based in
             Asheville, NC. By day, I'm an application administrator for NOAA's
             CLASS project. In my free-time, I'm staying home, staying safe, and
             learning more and more about making modern websites.
           </p>
-          <p className="mb-6">
+          <p className="mb-6 border-l-2 pl-2 border-gray-700">
             To see some examples of my work, check out my projects.
           </p>
-          <p className="mb-6">Drop me a line using the contact link.</p>
+          <p className="mb-6 border-l-2 pl-2 border-gray-700">
+            Drop me a line using the contact link.
+          </p>
         </section>
       </main>
     </>
