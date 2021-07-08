@@ -4,7 +4,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 export default function Header() {
   return (
-    <nav className="bg-green-200 grid items-center border-b-2 border-gray-800 py-2 ">
+    <nav className="bg-green-200 grid items-center border-b-2 border-gray-800 py-4">
       <ul className="grid grid-cols-8 text-center">
         <li className="col-span-2 block text-gray-800 font-bold text-xl hover:text-gray-500">
           <Link to="/">Home</Link>

@@ -10,7 +10,7 @@ export default function IndexPage({ data }) {
   return (
     <>
       <SEO title="Home" image={selfie} />
-      <main className="grid px-6 max-w-xl m-auto  ">
+      <main className="grid px-6 max-w-xl mx-auto md:mt-12 ">
         <aside className="mt-10 grid m-auto justify-items-center">
           <GatsbyImage
             image={selfie}
