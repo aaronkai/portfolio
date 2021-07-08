@@ -103,7 +103,7 @@ export default function ProjectsPage({ data }) {
 
         <section className=" border-4 border-gray-700 my-6 p-6 bg-gray-200 rounded shadow">
           <h2 className="mt-12 text-4xl text-gray-800 font-sans text-center border-b-2 pb-4 border-gray-700 uppercase">
-            <a className="hover:text-green-600" href="https://bauccus-atlas.netlify.app/">Asheville Aikikai</a>
+            <a className="hover:text-green-600" href="https://asheville-aikikai-refresh.netlify.app/">Asheville Aikikai</a>
           </h2>
           <div className="mt-12 border-2 border-gray-700 shadow">
             <GatsbyImage
@@ -119,7 +119,7 @@ export default function ProjectsPage({ data }) {
 
         <section className=" border-4 border-gray-700 my-6 p-6 bg-gray-200 rounded shadow">
           <h2 className="mt-12 text-4xl text-gray-800 font-sans text-center border-b-2 pb-4 border-gray-700 uppercase">
-            <a className="hover:text-green-600" href="https://bauccus-atlas.netlify.app/">Bacchus Atlas Refresh</a>
+            <a className="hover:text-green-600" href="https://www.bacchusatlas.com/">Bacchus Atlas Refresh</a>
           </h2>
           <div className="mt-12 border-2 border-gray-700 shadow">
             <GatsbyImage
